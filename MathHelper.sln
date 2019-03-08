@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathHelper.Api", "MathHelper.Api\MathHelper.Api.csproj", "{4A2B5274-0446-4779-926F-243BA24CA239}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathHelper.Host", "MathHelper.Host\MathHelper.Host.csproj", "{140B4804-E5CF-4E1C-870D-B0031B934B42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A2B5274-0446-4779-926F-243BA24CA239}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A2B5274-0446-4779-926F-243BA24CA239}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A2B5274-0446-4779-926F-243BA24CA239}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A2B5274-0446-4779-926F-243BA24CA239}.Release|Any CPU.Build.0 = Release|Any CPU
+		{140B4804-E5CF-4E1C-870D-B0031B934B42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{140B4804-E5CF-4E1C-870D-B0031B934B42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{140B4804-E5CF-4E1C-870D-B0031B934B42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{140B4804-E5CF-4E1C-870D-B0031B934B42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
