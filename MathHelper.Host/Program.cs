@@ -1,23 +1,20 @@
-﻿using System;
-using Nancy.Hosting.Self;
+﻿using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace MathHelper.Host
 {
-    static class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            var hostConfigs = new HostConfiguration
-            {
-                UrlReservations = new UrlReservations() { CreateAutomatically = false }
-            };
+            var host = new WebHostBuilder()
+                .UseKestrel()
+                .UseUrls("http://*:8080")
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseStartup<Startup>()
+                .Build();
 
-            var uri = new Uri("http://localhost:1234");
-            var host = new NancyHost(hostConfigs, uri);
-            host.Start();
-            Console.WriteLine("Service started");
-            Console.ReadLine();
-            host.Stop();
+            host.Run();
         }
     }
 }
