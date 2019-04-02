@@ -18,7 +18,7 @@ namespace MathHelper.Host
             _path = path;
         }
 
-        public async Task<TResponse> Post(TRequest request)
+        public async Task<TResponse> PostAsync(TRequest request)
         {
             var client = new HttpClient { BaseAddress = new Uri (_baseUrl) };
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));

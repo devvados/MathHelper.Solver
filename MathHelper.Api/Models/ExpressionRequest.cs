@@ -2,6 +2,6 @@ namespace MathHelper.Api.Models
 {
     public class ExpressionRequest
     {
-        public int Expression { get; set; }
+        public string Expression { get; set; }
     }
 }
