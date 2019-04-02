@@ -10,3 +10,5 @@ gen
 bin
 obj
 *.user
+/.vs/MathHelper/v15
+/.vs
