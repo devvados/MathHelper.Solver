@@ -8,6 +8,7 @@ using MathLib.Engine;
 using MathLib.Engine.Modules;
 using Microsoft.Extensions.Logging;
 using Nancy;
+using Nancy.Extensions;
 using Nancy.Validation;
 
 namespace MathHelper.Api.Modules
@@ -24,11 +25,9 @@ namespace MathHelper.Api.Modules
 
             Get("/derivative/{value:expression}", p =>
             {
-                var derivativeEngine = new DerivativeEngine();
-                
                 return GetDerivativeAsync(new ExpressionRequest()
                 {
-                    Expression =  derivativeEngine.Evaluate(p.value)
+                    Expression =  p.value
                 });
             });
         }
@@ -42,8 +41,16 @@ namespace MathHelper.Api.Modules
                 return new ExpressionResponse { Success = false, Errors = validationResult.FormattedErrors };
             }
 
-            var result = new ExpressionResponse { Success = true, Derivative = request.Expression };
-            await _logServiceClient.PostAsync(new LogRequest { Message = $"Generated Factorial for {request.Expression}: {result.Derivative}"});
+            var derivativeEngine = new DerivativeEngine();
+            var derivativeFunction = derivativeEngine.Evaluate(request.Expression);
+            
+            var result = new ExpressionResponse
+            {
+                Success = true, 
+                SimpleDerivative = derivativeFunction.SimpleExpression,
+                LatexDerivative = derivativeFunction.LatexExpression
+            };
+            await _logServiceClient.PostAsync(new LogRequest { Message = $"Generated Factorial for {request.Expression}: {result.SimpleDerivative}"});
 
             return result;
         }
