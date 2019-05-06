@@ -23,13 +23,10 @@ namespace MathHelper.Api.Modules
             _logger = loggerFactory.CreateLogger<DerivativeModule>();
             _logServiceClient = logServiceClient;
 
-            Get("/derivative/{value:expression}", p =>
+            Get("/derivative/{value:expression}", p => GetDerivativeAsync(new ExpressionRequest()
             {
-                return GetDerivativeAsync(new ExpressionRequest()
-                {
-                    Expression =  p.value
-                });
-            });
+                Expression =  p.value
+            }));
         }
 
         private async Task<ExpressionResponse> GetDerivativeAsync(ExpressionRequest request)
