@@ -9,6 +9,7 @@ using MathLib.Engine.Modules;
 using Microsoft.Extensions.Logging;
 using Nancy;
 using Nancy.Extensions;
+using Nancy.ModelBinding;
 using Nancy.Validation;
 
 namespace MathHelper.Api.Modules
@@ -22,32 +23,34 @@ namespace MathHelper.Api.Modules
         {
             _logger = loggerFactory.CreateLogger<DerivativeModule>();
             _logServiceClient = logServiceClient;
-
-            Get("/derivative/{value:expression}", p => GetDerivativeAsync(new ExpressionRequest()
+            
+            Post("/derivative", p =>
             {
-                Expression =  p.value
-            }));
+                var request = this.Bind<EvaluateRequest>();
+
+                return GetDerivativeAsync(request);
+            });
         }
 
-        private async Task<ExpressionResponse> GetDerivativeAsync(ExpressionRequest request)
+        private async Task<EvaluateResponse> GetDerivativeAsync(EvaluateRequest request)
         {
             var validationResult = this.Validate(request);
             if (!validationResult.IsValid)
             {
-                await _logServiceClient.PostAsync(new LogRequest { Message = $"Failed to generate factorial for {request.Expression}" });
-                return new ExpressionResponse { Success = false, Errors = validationResult.FormattedErrors };
+                await _logServiceClient.PostAsync(new LogRequest { Message = $"Failed generate derivative for {request.Expression}" });
+                return new EvaluateResponse { Success = false, Errors = validationResult.FormattedErrors };
             }
-
+            
             var derivativeEngine = new DerivativeEngine();
             var derivativeFunction = derivativeEngine.Evaluate(request.Expression);
             
-            var result = new ExpressionResponse
+            var result = new EvaluateResponse
             {
                 Success = true, 
                 SimpleDerivative = derivativeFunction.SimpleExpression,
                 LatexDerivative = derivativeFunction.LatexExpression
             };
-            await _logServiceClient.PostAsync(new LogRequest { Message = $"Generated Factorial for {request.Expression}: {result.SimpleDerivative}"});
+            await _logServiceClient.PostAsync(new LogRequest { Message = $"Generated derivative for {request.Expression}: {result.SimpleDerivative}"});
 
             return result;
         }
