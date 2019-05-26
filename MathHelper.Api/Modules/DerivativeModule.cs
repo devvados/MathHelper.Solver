@@ -1,14 +1,10 @@
-using System.Reflection;
 using System.Threading.Tasks;
-using Logger.Api.Models;
-using Logger.Api.Modules;
+using MathHelper.Api.Contracts.Logger;
 using MathHelper.Api.Models;
 using MathHelper.Host;
-using MathLib.Engine;
 using MathLib.Engine.Modules;
 using Microsoft.Extensions.Logging;
 using Nancy;
-using Nancy.Extensions;
 using Nancy.ModelBinding;
 using Nancy.Validation;
 

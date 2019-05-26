@@ -1,6 +1,5 @@
-using Logger.Api.Models;
 using MathHelper.Api;
-using MathHelper.Api.Models;
+using MathHelper.Api.Contracts.Logger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
