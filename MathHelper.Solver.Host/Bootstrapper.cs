@@ -1,13 +1,13 @@
 using System;
-using MathHelper.Api.Contracts.Logger;
-using MathHelper.Host;
+using MathHelper.Solver.Api;
+using MathHelper.Solver.Api.Contracts.Logger;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Nancy;
 using Nancy.Configuration;
 using Nancy.TinyIoc;
 
-namespace MathHelper.Api
+namespace MathHelper.Solver.Host
 {
     public class Bootstrapper : DefaultNancyBootstrapper
     {

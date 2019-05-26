@@ -11,13 +11,12 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Reference Include="FluentValidation, Version=6.3.4.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\.nuget\packages\fluentvalidation\6.3.4-alpha\lib\netstandard1.0\FluentValidation.dll</HintPath>
+      </Reference>
       <Reference Include="MathLib.Engine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
         <HintPath>..\..\MathLib\MathLib.Engine\bin\Debug\netstandard2.0\MathLib.Engine.dll</HintPath>
       </Reference>
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\Logger.Api\Logger.Api.csproj" />
     </ItemGroup>
 
 </Project>

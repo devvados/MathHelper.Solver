@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace MathHelper.Host
+namespace MathHelper.Solver.Api
 {
     public class ServiceClient<TRequest, TResponse>
     {

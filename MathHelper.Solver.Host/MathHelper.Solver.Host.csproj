@@ -17,7 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\MathHelper.Api\MathHelper.Api.csproj" />
+      <ProjectReference Include="..\MathHelper.Solver.Api\MathHelper.Solver.Api.csproj" />
     </ItemGroup>
 
 </Project>

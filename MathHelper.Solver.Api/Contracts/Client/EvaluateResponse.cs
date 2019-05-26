@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace MathHelper.Api.Models
+namespace MathHelper.Solver.Api.Contracts.Client
 {
     public class EvaluateResponse
     {

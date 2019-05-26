@@ -1,11 +1,11 @@
-using MathHelper.Api;
-using MathHelper.Api.Contracts.Logger;
+using MathHelper.Solver.Api;
+using MathHelper.Solver.Api.Contracts.Logger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Nancy.Owin;
 
-namespace MathHelper.Host
+namespace MathHelper.Solver.Host
 {
     public class Startup
     {

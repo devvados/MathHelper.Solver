@@ -1,6 +1,6 @@
 using Nancy;
 
-namespace MathHelper.Api.Modules
+namespace MathHelper.Solver.Api.Modules
 {
     public sealed class IntegrationModule : NancyModule
     {

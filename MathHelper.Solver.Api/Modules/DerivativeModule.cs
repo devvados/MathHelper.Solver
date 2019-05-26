@@ -1,14 +1,13 @@
 using System.Threading.Tasks;
-using MathHelper.Api.Contracts.Logger;
-using MathHelper.Api.Models;
-using MathHelper.Host;
+using MathHelper.Solver.Api.Contracts.Client;
+using MathHelper.Solver.Api.Contracts.Logger;
 using MathLib.Engine.Modules;
 using Microsoft.Extensions.Logging;
 using Nancy;
 using Nancy.ModelBinding;
 using Nancy.Validation;
 
-namespace MathHelper.Api.Modules
+namespace MathHelper.Solver.Api.Modules
 {
     public sealed class DerivativeModule : NancyModule
     {   

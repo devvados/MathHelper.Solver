@@ -1,7 +1,7 @@
 using FluentValidation;
-using MathHelper.Api.Models;
+using MathHelper.Solver.Api.Contracts.Client;
 
-namespace MathHelper.Api.Validators
+namespace MathHelper.Solver.Api.Validators
 {
     public class ExpressionRequestValidator : AbstractValidator<EvaluateRequest>
     {

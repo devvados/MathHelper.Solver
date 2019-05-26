@@ -1,6 +1,6 @@
 using Nancy.Routing.Constraints;
 
-namespace MathHelper.Api.RouteSegmentConstraints
+namespace MathHelper.Solver.Api.RouteSegmentConstraints
 {
     public class EmailRouteSegmentConstraint : RouteSegmentConstraintBase<string>
     {

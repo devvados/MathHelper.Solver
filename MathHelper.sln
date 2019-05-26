@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathHelper.Api", "MathHelper.Api\MathHelper.Api.csproj", "{4A2B5274-0446-4779-926F-243BA24CA239}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathHelper.Solver.Api", "MathHelper.Solver.Api\MathHelper.Solver.Api.csproj", "{4A2B5274-0446-4779-926F-243BA24CA239}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathHelper.Host", "MathHelper.Host\MathHelper.Host.csproj", "{140B4804-E5CF-4E1C-870D-B0031B934B42}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathHelper.Solver.Host", "MathHelper.Solver.Host\MathHelper.Solver.Host.csproj", "{140B4804-E5CF-4E1C-870D-B0031B934B42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace MathHelper.Api.Contracts.Logger
+namespace MathHelper.Solver.Api.Contracts.Logger
 {
     public class LogResponse
     {

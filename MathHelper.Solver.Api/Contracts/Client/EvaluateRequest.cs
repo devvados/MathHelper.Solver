@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace MathHelper.Api.Models
+namespace MathHelper.Solver.Api.Contracts.Client
 {
     public class EvaluateRequest
     {
